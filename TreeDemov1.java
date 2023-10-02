@@ -122,7 +122,17 @@ class Node{
 	   */
 	   public boolean find(Node root, int key){
 		 //implement in here
-		  
+		   if(root == null){
+         return false;
+      }
+      
+      if(root.value == key){
+         return true;      
+      }else if(key < root.value){
+         return find(root.left, key);
+      }else{
+         return find(root.right, key);
+      }        
 	   }
 	   
 	   
