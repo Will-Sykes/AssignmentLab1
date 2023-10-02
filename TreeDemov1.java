@@ -63,7 +63,6 @@ class Node{
       if(root == null){
          return;
       }
-      
       System.out.print(root.value+" ");
       //go left recursively
       preOrderTraversal(root.left);
