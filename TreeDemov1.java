@@ -143,7 +143,15 @@ class Node{
 	   */
 	   public int getMin(Node root){
          //implement in here
-	      
+	      if (root == null) {
+            throw new IllegalArgumentException("The tree is empty.");
+        }
+
+        while (root.left != null) {
+            root = root.left;
+        }
+
+        return root.value;
 	   }
 	  
 	  
