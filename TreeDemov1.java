@@ -161,6 +161,15 @@ class Node{
 	   */
 	   public int getMax(Node root){
          //implement in here
+         if (root == null) {
+            return Integer.MIN_VALUE; // Return a sentinel value for an empty tree
+        }
+
+        while (root.right != null) {
+            root = root.right;
+        }
+
+        return root.value;
 	   }
 	   
 	   
